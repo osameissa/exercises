@@ -24,14 +24,15 @@ body {
     font-family: 'Rubik', sans-serif;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    background: #ffffff;
+    background: rgba(245, 233, 233, 0.88);
+    box-shadow: darkgrey 2px -2px;
 }
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #b0b8b9;
+    background-color: rgba(176, 184, 185, 0.7);
 }
   
 li {
@@ -48,8 +49,9 @@ li a {
     font-family: 'Rubik', sans-serif;
 }
   
-li a:hover:not(.about) {
+li a:hover {
     background-color: #819fb1;
+    text-decoration: underline;
     
 }
   
@@ -57,6 +59,9 @@ li a:hover:not(.about) {
     background-color: #819fb1;
 }
 
+.formHidden {
+    display: none;
+}
 
 footer {
     position: fixed;
@@ -65,7 +70,104 @@ footer {
     min-height: 60px;
     text-align: center;
     padding-top: 10px;
-    background-color: #e8cfb9;
+    background-color: rgba(232, 207, 185, 0.8);
     color: black;
     font-family: 'Rubik', sans-serif;
+    padding-bottom: 20px;
+    
+}
+
+.form > *:first-child {
+    margin-top: 0;
+}
+
+.form > *:last-child {
+    margin-bottom: 0;
+}
+
+.formMessage {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.errorMessage {
+    color: red;
+}
+
+.formMessageSuccess {
+    color: green;
+ }
+
+ .formTitle {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.formInputGroup {
+    margin-bottom: 1rem;
+
+}
+
+.formInput {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: solid 1px #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+    margin: 1rem 0rem;
+}
+
+.formInput:hover {
+    border-color: darkgrey;
+    background: white;
+ }
+
+ .errorMessage {
+    color: red;
+    border-color: red;
+ }
+
+.formInputError {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: red;
+}
+
+.formBtn {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border:none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    background: green;
+}
+
+.formBtn:hover {
+    background: darkgreen;
+}
+
+.formBtn:active {
+    transform: scale(0.98);
+}
+
+.formText {
+    text-align: center;
+}
+
+.formLink {
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.formLink:hover {
+    text-decoration: underline;
 }

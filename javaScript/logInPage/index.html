@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <title>Login Portal</title>
+    <title>User Portal</title>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -22,23 +22,54 @@
     </div>
     
     <div class ="container">
-        <form class="form" id="login">
+        <form class="form formHidden" id="login">
             <h1 class="formTitle">Login</h1>
-            <div class="formMessage formErrorMessage">Incorrect username/password combination</div>
+            <div class="formMessage errorMessage"></div>
             <div class="formInputGroup">
                 <input type="text" class="formInput" autofocus placeholder="Username or email">
-                <div class="formInputErrorMessage">formInputErrorMessage</div>
+                <div class="formInputError"></div>
             </div>
             <div class="formInputGroup">
-                <input type="password" class="formInput" autofocus placeholder="Password">
-                <div class="formInputErrorMessage">formInputErrorMessage</div>
+                <input type="password" class="formInput errorMessage" autofocus placeholder="Password">
+                <div class="formInputError"></div>
             </div>
             <button class="formBtn" type="submit">Continue</button>
             <p class="formText">
                 <a href="#" class="formLink">Forgot your password?</a>
             </p>
             <p class="formText">
-                <a href="" id="createAccount" class="formLink">Dont have an account? Create account</a>
+                <a href="" id="linkCreateAccount" class="formLink">Dont have an account? Create account</a>
+            </p>
+
+
+
+
+
+
+        </form>
+        <form class="form formHidden" id="createAccount">
+            <h1 class="formTitle">Create account</h1>
+            <div class="formMessage errorMessage"></div>
+            <div class="formInputGroup">
+                <input type="text" class="formInput" autofocus placeholder="Username">
+                <div class="formInputError"></div>
+            </div>
+            <div class="formInputGroup">
+                <input type="text" class="formInput" autofocus placeholder="E-mail address">
+                <div class="formInputGroup">
+                    <input type="password" class="formInput" autofocus placeholder="Password">
+                    <div class="formInputGroup">
+                        <input type="password" class="formInput" autofocus placeholder="Confirm password">
+                        <div class="formInputError"></div>
+                    </div>
+                    <div class="formInputError"></div>
+                </div>
+                <div class="formInputError"></div>
+            </div>
+            <button class="formBtn" type="submit">Continue</button>
+           
+            <p class="formText">
+                <a href="" id="linkLogIn" class="formLink">Already have an account? Sign in</a>
             </p>
 
 
@@ -51,7 +82,7 @@
 
     <footer>
         <p>Need any help? Contact us at:</p>
-        <a href="">contact@exam.ple</a>
+        <a href="">contact@example.io</a>
     </footer>
     
 </body>
