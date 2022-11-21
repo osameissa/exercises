@@ -25,7 +25,7 @@ body {
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     background: rgba(245, 233, 233, 0.88);
-    box-shadow: darkgrey 2px -2px;
+
 }
 ul {
     list-style-type: none;
@@ -47,6 +47,7 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
     font-family: 'Rubik', sans-serif;
+    font-weight: lighter;
 }
   
 li a:hover {
@@ -74,6 +75,7 @@ footer {
     color: black;
     font-family: 'Rubik', sans-serif;
     padding-bottom: 20px;
+    text-decoration: none;
     
 }
 
