@@ -90,7 +90,8 @@ checkCredentials = () => {
         localStorage.clear();
         console.log("Cleared localStorage");
     })
-    //push newly created accounts into array
     
+    //push newly created accounts into array
+
   }
 }
