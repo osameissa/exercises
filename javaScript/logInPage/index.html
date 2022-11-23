@@ -10,14 +10,14 @@
     <title>User Portal</title>
     <script src="script.js" defer></script>
 </head>
-<body>
+<body class="checking" onload="checkCredentials()">
 
     <div class ="meny">
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">News</a></li>
-            <li><a href="">Contact</a></li>
-            <li style="float:right"><a class="signInBtn" href="" >Sign in</a></li>
+            <li><a>Home</a></li>
+            <li><a>News</a></li>
+            <li><a>Contact</a></li>
+            <li style="float:right"><a class="signoutBtn formHidden" id="signOutBtn" style="font-weight: bold;"" href="";>Sign out</a></li>
           </ul>
     </div>
     
@@ -51,13 +51,13 @@
             <h1 class="formTitle">Create account</h1>
             <div class="formMessage errorMessage"></div>
             <div class="formInputGroup">
-                <input type="text" class="formInput" autofocus placeholder="Username">
+                <input type="text" class="formInput" id="storeUsername" autofocus placeholder="Username">
                 <div class="formInputError"></div>
             </div>
             <div class="formInputGroup">
                 <input type="text" class="formInput" autofocus placeholder="Email address">
                 <div class="formInputGroup">
-                    <input type="password" class="formInput" autofocus placeholder="Password">
+                    <input type="password" class="formInput" id="storePassword" autofocus placeholder="Password">
                     <div class="formInputGroup">
                         <input type="password" class="formInput" autofocus placeholder="Confirm password">
                         <div class="formInputError"></div>
@@ -81,12 +81,12 @@
     </div>
 
     <footer>
-        <p style="font-weight:lighter">Do you have any questions? Contact us at:</p>
-        <a href="" style="text-decoration:none">
+        <p class="dou" style="font-weight:bolder">Do you have any questions? Contact us at:</p>
+        <a style="text-decoration:none" style="font-weight: lighter;">
             <i class="fa-solid fa-envelope"></i>
             contact@example.io</a>
         <br><br>
-        <a> <i class="fa-solid fa-phone"></i>
+        <a style="font-weight:light"> <i class="fa-solid fa-phone"></i>
              +1 234 567 89
         </a>
     </footer>

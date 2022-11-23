@@ -56,7 +56,6 @@ li a:hover {
     
 }
   
-.signInBtn,
 .signOutBtn {
     background-color: #819fb1;
 }
@@ -80,11 +79,18 @@ footer {
     
 }
 
-.form > *:first-child {
+.footer, 
+.dou {
+    text-decoration: underline;
+}
+
+.form >
+*:first-child {
     margin-top: 0;
 }
 
-.form > *:last-child {
+.form >
+*:last-child {
     margin-bottom: 0;
 }
 
@@ -140,7 +146,8 @@ footer {
     color: red;
 }
 
-.formBtn {
+.formBtn,
+.formBtn2 {
     width: 100%;
     padding: 1rem 2rem;
     font-weight: bold;
@@ -153,11 +160,13 @@ footer {
     background: green;
 }
 
-.formBtn:hover {
+.formBtn:hover,
+.formBtn2:hover {
     background: darkgreen;
 }
 
-.formBtn:active {
+.formBtn:active,
+.formBtn2:active {
     transform: scale(0.98);
 }
 
