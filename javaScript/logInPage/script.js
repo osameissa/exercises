@@ -1,6 +1,8 @@
 //linkLogIn -> signUpForm
 //linkSignUp -> logInForm
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const logInForm = document.querySelector("#logIn");
     const createAccountForm = document.querySelector("#createAccount");
@@ -16,6 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
         logInForm.classList.remove("formHidden");
         createAccountForm.classList.add("formHidden");
     });
+     //clear cache when clicking on signOutBtn
+     document.getElementById("signOutBtn").addEventListener("click" , () => {
+        localStorage.clear();
+        console.log("Cleared localStorage");
+    })
 })
 
 // signingIn
@@ -85,11 +92,6 @@ checkCredentials = () => {
         return true;
         }
 
-    //clear cache when signing out
-     document.getElementById("signOutBtn").addEventListener("click" , () => {
-        localStorage.clear();
-        console.log("Cleared localStorage");
-    })
     
     //push newly created accounts into array
 
