@@ -85,7 +85,7 @@ checkCredentials = () => {
         return true;
         }
 
-    //clear cache when clicking on signOutBtn
+    //clear cache when signing out
      document.getElementById("signOutBtn").addEventListener("click" , () => {
         localStorage.clear();
         console.log("Cleared localStorage");
