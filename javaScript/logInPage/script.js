@@ -18,24 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 })
 
-// signingIn
-const logInForm = document.querySelector("#logIn"); 
-    
-logInForm.addEventListener("submit", e =>   {
-    e.preventDefault()
-
-    // get username/password values
-    let username = document.getElementById("username").value
-    let password = document.getElementById("password").value
-
-    // store values in localStorage
-         localStorage.setItem("username", username);
-         localStorage.setItem("password", password);
-         console.log("Credentials stored in localStorage");
-
-     
-})
-
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const welcome = document.getElementById("welcome");
@@ -69,6 +51,11 @@ loggingIn = () => {
     invalid.classList.remove("formHidden");
     console.log("Invalid credentials");
 }
+ //clear cache when signing out
+     document.getElementById("signOutBtn").addEventListener("click" , () => {
+        localStorage.clear();
+        console.log("Cleared localStorage");
+    })
 
 // fetch values from localStorage, "autologin"
 checkCredentials = () => {
@@ -85,13 +72,14 @@ checkCredentials = () => {
         return true;
         }
 
-    //clear cache when signing out
+     //clear cache when signing out
      document.getElementById("signOutBtn").addEventListener("click" , () => {
         localStorage.clear();
         console.log("Cleared localStorage");
     })
-    
-    //push newly created accounts into array
+
+     //push newly created accounts into users array
 
   }
 }
+
