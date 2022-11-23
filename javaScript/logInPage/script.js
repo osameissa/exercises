@@ -87,11 +87,10 @@ checkCredentials = () => {
 
     //clear cache when signing out
      document.getElementById("signOutBtn").addEventListener("click" , () => {
-        localStorage.removeItem("username", username);
-        localStorage.removeItem("password", password);
+        localStorage.clear();
         console.log("Cleared localStorage");
     })
-
     //push newly created accounts into array
+    
   }
 }
