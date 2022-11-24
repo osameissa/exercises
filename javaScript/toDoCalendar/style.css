@@ -62,7 +62,6 @@ form button:hover {
     font-size: 1.5rem;
     justify-content: space-between;
     align-items: center;
-    transition: all 0.5s ease;
     margin: 0,5rem;
     
 }
