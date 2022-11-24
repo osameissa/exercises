@@ -23,14 +23,14 @@ font-size: 1rem;
 text-decoration: underline; 
 font-weight: normal;
 cursor: pointer;
-color: black;
+color: #000000;
 text-align: center;
 }
 
 .link:hover {
     font-size: 1rem;
     text-decoration: underline; 
-    font-weight: normal;
+    font-weight: bold;
     cursor: pointer; 
-    color: black;
+    color: #000000;
 }
