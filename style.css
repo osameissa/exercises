@@ -1,9 +1,18 @@
 body {
-    text-align: center; 
     list-style-position: inside;
     background-image: linear-gradient(120deg,#6593f6,#d88771);
     font-family: 'Poppy', sans-serif;
+    overflow-x: hidden;
+    text-align: center;
+    align-items: center;
+   
 }
+
+@media only screen and (max-width: 612px) {
+    body {
+      margin-right: 50px;
+    }
+  }
 
 h1 {
 font-size: 2rem;
@@ -15,6 +24,7 @@ text-decoration: underline;
 font-weight: normal;
 cursor: pointer;
 color: black;
+text-align: center;
 }
 
 .link:hover {
@@ -23,4 +33,4 @@ color: black;
     font-weight: normal;
     cursor: pointer; 
     color: black;
-    }
+}
