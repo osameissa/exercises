@@ -52,12 +52,12 @@ font-family: 'Rubik', sans-serif;
   
 li 
 a:hover {
-    background-color: #819fb1;
-    cursor: default;
+background-color: #819fb1;
+cursor: default;
 }
 
 .formHidden {
-    display: none;
+display: none;
 }
 
 footer {
