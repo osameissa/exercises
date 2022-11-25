@@ -32,7 +32,7 @@ list-style-type: none;
 margin: 0;
 padding: 0;
 overflow: hidden;
-background-color: rgba(176, 184, 185, 0.7);
+background: rgba(216, 203, 203, 0.8);
 }
 
 li {
@@ -67,14 +67,14 @@ min-width: 100vw;
 min-height: 60px;
 text-align: center;
 padding-top: 10px;
-background-color: rgba(232, 207, 185, 0.8);
+background: rgba(216, 203, 203, 0.8);
 color: black;
 font-family: 'Rubik', sans-serif;
 padding-bottom: 20px;
 text-decoration: none;
 }
 
-.footer, 
+footer
 .dou {
 text-decoration: underline;
 }
