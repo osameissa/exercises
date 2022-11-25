@@ -48,16 +48,12 @@ li a {
     text-decoration: none;
     font-family: 'Rubik', sans-serif;
     font-weight: lighter;
+    transform: scale(1.2);
 }
   
 li a:hover {
     background-color: #819fb1;
-    text-decoration: underline;
-    
-}
-  
-.signOutBtn {
-    background-color: #819fb1;
+    transform: scale(1.4);
 }
 
 .formHidden {
@@ -194,5 +190,4 @@ footer {
     font-weight: bold;
     font-size: 1.5rem;
     text-align: center;
-    background-image: url("images/task.png")
 }

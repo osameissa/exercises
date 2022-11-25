@@ -2,7 +2,6 @@
 //linkSignUp -> logInForm
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const logInForm = document.querySelector("#logIn");
     const createAccountForm = document.querySelector("#createAccount");
@@ -25,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
 
-// signingIn
+// get username, password & store in localStorage
 const logInForm = document.querySelector("#logIn"); 
     
 logInForm.addEventListener("submit", e =>   {
@@ -46,10 +45,9 @@ logInForm.addEventListener("submit", e =>   {
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const welcome = document.getElementById("welcome");
-const formTask = document.getElementById("formTask");
 const signOutBtn = document.getElementById("signOutBtn");
 
-
+    // array
     const users = [ 
         {"username": "Janne", "password": "test"},
         {"username": "Joe", "password": "Doe"},
@@ -68,6 +66,7 @@ loggingIn = () => {
         logInForm.classList.add("formHidden");
         formTask.classList.remove("formHidden");
         signOutBtn.classList.remove("formHidden");
+        signOutBtn.innerHTML = '<i class="fa-solid fa-arrow-right-from-bracket"></i>';
         formTask.innerHTML = "Welcome, " + username.value;
         return true;
       }
@@ -88,6 +87,7 @@ checkCredentials = () => {
         logInForm.classList.add("formHidden");
         formTask.classList.remove("formHidden");
         signOutBtn.classList.remove("formHidden");
+        signOutBtn.innerHTML = '<i class="fa-solid fa-arrow-right-from-bracket"></i>';
         formTask.innerHTML = "Welcome, " + storedUsername;
         return true;
         }
