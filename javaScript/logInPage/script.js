@@ -1,4 +1,4 @@
-// Selectors
+// ---Selectors---
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const welcome = document.getElementById("welcome");
@@ -13,8 +13,8 @@ const users = [
 {"username": "Bob", "password": "Lazar"},
 {"username": "Mario", "password": "64"}];
 
-// Event-listeners
-// Switching between logInForm & createAccountForm
+// ---Event-listeners---
+// switching between logInForm & createAccountForm
 document.addEventListener("DOMContentLoaded", () => {
     const logInForm = document.querySelector("#logIn");
     const createAccountForm = document.querySelector("#createAccount");
@@ -22,26 +22,27 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#linkCreateAccount").addEventListener("click", e => {
         e.preventDefault();
         logInForm.classList.add("formHidden");
-        createAccountForm.classList.remove("formHidden");});
+        createAccountForm.classList.remove("formHidden");
+    }
+)
 
         document.querySelector("#linkLogIn").addEventListener("click", e => {
             e.preventDefault();
             logInForm.classList.remove("formHidden");
-            createAccountForm.classList.add("formHidden"
-        )
-    }
-)
+            createAccountForm.classList.add("formHidden")  
+        }
+    )
     
-// Clear localStorage when clicking on signOutBtn
+// clear localStorage when clicking on signOutBtn
             document.getElementById("signOutBtn").addEventListener("click" , () => {
                 localStorage.clear();
-                console.log("Cleared localStorage");
+                console.log("Cleared localStorage")
             }
         )
     }
 )
 
-// Store username, password in localStorage
+// store username, password in localStorage
 logInForm.addEventListener("submit", e =>   {
     e.preventDefault()
     let username = document.getElementById("username").value
@@ -52,7 +53,7 @@ logInForm.addEventListener("submit", e =>   {
     }
 )
 
-// Functions
+// ---Functions---
 loggingIn = () => { 
     const loggingIn = document.getElementById('formBtn');
     console.log('Checking credentials..');
@@ -69,12 +70,12 @@ loggingIn = () => {
         }
     }
 
-// If invalid credentials -> display error message
+// if invalid credentials -> display error message
     invalid.classList.remove("formHidden");
     console.log("Invalid credentials");
 }
 
-// Autologin: fetch values from localStorage & cross-check
+// autologin: fetch values from localStorage & cross-check
 checkCredentials = () => {
     for (i = 0; i < users.length; i++) {
         let storedUsername = localStorage.getItem("username");
