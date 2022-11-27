@@ -74,7 +74,7 @@ createAccount.addEventListener("submit", e => {
 
 // ---Functions---
 loggingIn = () => {
-//  let users = JSON.parse(localStorage.getItem("users"))
+    let users = JSON.parse(localStorage.getItem("users"))
     console.log('Checking credentials..')
     for (i = 0; i < users.length; i++) {
         if (username.value == users[i].username && password.value == users[i].password) {
@@ -94,8 +94,7 @@ loggingIn = () => {
 }
 // autologin: fetch values from localStorage & cross-check
 checkCredentials = () => {
-    localStorage.setItem("users", JSON.stringify(users));
-    // let users = JSON.parse(localStorage.getItem("users"))
+    let users = JSON.parse(localStorage.getItem("users"))
     for (i = 0; i < users.length; i++) {
         let storedUsername = localStorage.getItem("username");
         let storedPassword = localStorage.getItem("password");
