@@ -34,7 +34,7 @@
             <input type="password" class="formInput" id="password" autofocus placeholder="Password">
             <div class="formInputError formHidden" id="invalid">Invalid username/password combination</div>
         </div>
-        <button class="formBtn" type="submit" onClick="loggingIn()">Continue</button>
+        <button class="formBtn" type="submit" onclick="loggingIn()">Continue</button>
         <p class="formText">
             <a href="#" class="formLink">Forgot your password?</a>
         </p>
@@ -47,18 +47,18 @@
         <h1 class="formTitle">Create account</h1>
         <div class="formMessage errorMessage"></div>
         <div class="formInputGroup">
-            <input type="text" class="formInput" id="storeUsername" autofocus placeholder="Username">
+            <input type="text" class="formInput" id="newUsername" autofocus placeholder="Username">
             <div class="formInputError"></div>
         </div>
         <div class="formInputGroup">
             <input type="text" class="formInput" autofocus placeholder="Email address">    
             <div class="formInputGroup">
-                <input type="password" class="formInput" id="storePassword" autofocus placeholder="Password">
+                <input type="password" class="formInput" id="newPassword" autofocus placeholder="Password">
                 <div class="formInputGroup">
-                <input type="password" class="formInput" autofocus placeholder="Confirm password">
-                <div class="formInputError">Username already exists</div>
+                <input type="password" class="formInput" id="newPassword2" autofocus placeholder="Confirm password">
+                <div class="formInputError formHidden" id="usernameError">Please enter a username</div>
             </div>
-            <div class="formInputError">Passwords do not match</div>
+            <div class="formInputError formHidden">Passwords do not match</div>
         </div>
         <div class="formInputError"></div>
     </div>

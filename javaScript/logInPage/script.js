@@ -6,14 +6,16 @@ const signOutBtn = document.getElementById("signOutBtn");
 const logInForm = document.querySelector("#logIn");
 
 // [username,password]
-const users = [ 
+let users = [ 
 {"username": "Janne", "password": "test"},
 {"username": "Joe", "password": "Doe"},
 {"username": "Sergey", "password": "Nazarov"},
 {"username": "Bob", "password": "Lazar"},
 {"username": "Mario", "password": "64"}];
 
+
 // ---Event-listeners---
+
 // switching between logInForm & createAccountForm
 document.addEventListener("DOMContentLoaded", () => {
     const logInForm = document.querySelector("#logIn");
@@ -54,10 +56,8 @@ logInForm.addEventListener("submit", e =>   {
 )
 
 // ---Functions---
-loggingIn = () => { 
-    const loggingIn = document.getElementById('formBtn');
-    console.log('Checking credentials..');
-
+loggingIn = () => {
+    console.log('Checking credentials..')
     for (i = 0; i < users.length; i++) {
         if (username.value == users[i].username && password.value == users[i].password) {
             console.log(username.value + " logged in.")
@@ -73,8 +73,8 @@ loggingIn = () => {
 // if invalid credentials -> display error message
     invalid.classList.remove("formHidden");
     console.log("Invalid credentials");
-}
 
+}
 // autologin: fetch values from localStorage & cross-check
 checkCredentials = () => {
     for (i = 0; i < users.length; i++) {
