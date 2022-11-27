@@ -4,11 +4,13 @@ const password = document.getElementById('password');
 const welcome = document.getElementById("welcome");
 const signOutBtn = document.getElementById("signOutBtn");
 const logInForm = document.querySelector("#logIn");
+const formBtn2 = document.querySelector("#formBtn2");
+const createAccount = document.querySelector("#createAccount");
 
 // [username,password]
 let users = [ 
 {"username": "Janne", "password": "test"},
-{"username": "Joe", "password": "Doe"},
+{"username": "John", "password": "Doe"},
 {"username": "Sergey", "password": "Nazarov"},
 {"username": "Bob", "password": "Lazar"},
 {"username": "Mario", "password": "64"}];
@@ -37,7 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
 // clear localStorage when clicking on signOutBtn
             document.getElementById("signOutBtn").addEventListener("click" , () => {
-                localStorage.clear();
+                localStorage.removeItem("username");
+                localStorage.removeItem("password");
                 console.log("Cleared localStorage")
             }
         )
@@ -55,8 +58,24 @@ logInForm.addEventListener("submit", e =>   {
     }
 )
 
+createAccount.addEventListener("submit", e => {
+    let newUsername = document.querySelector("#newUsername").value
+    let newPassword = document.querySelector("#newPassword").value
+    let newPassword2 = document.querySelector("#newPassword2").value
+    let newUser = {
+        username: newUsername,
+        password: newPassword
+    }
+        users.push(newUser);
+            localStorage.setItem("users", JSON.stringify(users));
+            alert("You have successfully created an account!");
+            return true;
+})
+
+
 // ---Functions---
 loggingIn = () => {
+    let users = JSON.parse(localStorage.getItem("users"))
     console.log('Checking credentials..')
     for (i = 0; i < users.length; i++) {
         if (username.value == users[i].username && password.value == users[i].password) {
@@ -69,7 +88,6 @@ loggingIn = () => {
             return true;
         }
     }
-
 // if invalid credentials -> display error message
     invalid.classList.remove("formHidden");
     console.log("Invalid credentials");
@@ -77,6 +95,7 @@ loggingIn = () => {
 }
 // autologin: fetch values from localStorage & cross-check
 checkCredentials = () => {
+    let users = JSON.parse(localStorage.getItem("users"))
     for (i = 0; i < users.length; i++) {
         let storedUsername = localStorage.getItem("username");
         let storedPassword = localStorage.getItem("password");
@@ -92,3 +111,4 @@ checkCredentials = () => {
         }
     }
 }
+window.onload = localStorage.setItem("users" (users))
