@@ -77,9 +77,8 @@ createAccount.addEventListener("submit", e => {
 
 // ---Functions---
 loggingIn = () => {
-    
-    console.log('Checking credentials..')
     localStorage.setItem("users", JSON.stringify(users))
+    console.log('Checking credentials..')
     for (i = 0; i < users.length; i++) {
         if (username.value == users[i].username && password.value == users[i].password) {
             console.log(username.value + " logged in.")
